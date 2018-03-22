@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Result
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let input = textField.reactive.continuousTextValues.skipNil().logEvents()
+        input.observeValues { v in
+            print(v)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
