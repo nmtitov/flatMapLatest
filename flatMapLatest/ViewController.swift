@@ -17,8 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let input = textField.reactive.continuousTextValues.skipNil()
+        let void = input.map { string in
+            return
+        }
         let requests = input.flatMap(.latest) { (text: String) -> SignalProducer<String, NoError> in
-            return ping(text: text)
+            return ping(text: text).take(until: void)
         }
         requests.observe { event in
             switch event {
