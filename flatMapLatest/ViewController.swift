@@ -39,8 +39,16 @@ class ViewController: UIViewController {
 }
 
 func ping(text: String) -> SignalProducer<String, NoError> {
-    return SignalProducer<String, NoError> { (observer, _) in
-        observer.send(value: "pong \(text)")
-        observer.sendCompleted()
+    return SignalProducer<String, NoError> { (observer, lifetime) in
+        let task = DispatchWorkItem {
+            observer.send(value: "pong \(text)")
+            observer.sendCompleted()
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(3), execute: task)
+        
+        lifetime.observeEnded {
+            task.cancel()
+            print("observeEnded")
+        }
     }
 }
