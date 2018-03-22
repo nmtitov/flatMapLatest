@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091881B78168E2DCCBBD1033 /* Pods_flatMapLatest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA60AFF2C5A0E5F1493FEA4 /* Pods_flatMapLatest.framework */; };
 		6F7191A920642AA600FC4733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7191A820642AA600FC4733 /* AppDelegate.swift */; };
 		6F7191AB20642AA600FC4733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7191AA20642AA600FC4733 /* ViewController.swift */; };
 		6F7191AE20642AA600FC4733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7191AC20642AA600FC4733 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250D86E0A7E8EF6F601CE770 /* Pods-flatMapLatest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flatMapLatest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flatMapLatest/Pods-flatMapLatest.debug.xcconfig"; sourceTree = "<group>"; };
+		567F58C6D60C67C2BD3967C9 /* Pods-flatMapLatest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flatMapLatest.release.xcconfig"; path = "Pods/Target Support Files/Pods-flatMapLatest/Pods-flatMapLatest.release.xcconfig"; sourceTree = "<group>"; };
 		6F7191A520642AA600FC4733 /* flatMapLatest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flatMapLatest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7191A820642AA600FC4733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F7191AA20642AA600FC4733 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6F7191AF20642AA600FC4733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F7191B220642AA600FC4733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F7191B420642AA600FC4733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA60AFF2C5A0E5F1493FEA4 /* Pods_flatMapLatest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flatMapLatest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091881B78168E2DCCBBD1033 /* Pods_flatMapLatest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6F7191A720642AA600FC4733 /* flatMapLatest */,
 				6F7191A620642AA600FC4733 /* Products */,
+				71C1EA21B35404737D2B1B84 /* Pods */,
+				8C5206CCBE28475452A201BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = flatMapLatest;
 			sourceTree = "<group>";
 		};
+		71C1EA21B35404737D2B1B84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				250D86E0A7E8EF6F601CE770 /* Pods-flatMapLatest.debug.xcconfig */,
+				567F58C6D60C67C2BD3967C9 /* Pods-flatMapLatest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C5206CCBE28475452A201BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA60AFF2C5A0E5F1493FEA4 /* Pods_flatMapLatest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F7191B720642AA600FC4733 /* Build configuration list for PBXNativeTarget "flatMapLatest" */;
 			buildPhases = (
+				8F9B5332C401EA91E6D55B6C /* [CP] Check Pods Manifest.lock */,
 				6F7191A120642AA600FC4733 /* Sources */,
 				6F7191A220642AA600FC4733 /* Frameworks */,
 				6F7191A320642AA600FC4733 /* Resources */,
+				6BE1375E33D168F41A5FE7DD /* [CP] Embed Pods Frameworks */,
+				6800E1F4D55E3F87B5E03383 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6800E1F4D55E3F87B5E03383 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flatMapLatest/Pods-flatMapLatest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BE1375E33D168F41A5FE7DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-flatMapLatest/Pods-flatMapLatest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flatMapLatest/Pods-flatMapLatest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F9B5332C401EA91E6D55B6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flatMapLatest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F7191A120642AA600FC4733 /* Sources */ = {
@@ -272,6 +357,7 @@
 		};
 		6F7191B820642AA600FC4733 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250D86E0A7E8EF6F601CE770 /* Pods-flatMapLatest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +373,7 @@
 		};
 		6F7191B920642AA600FC4733 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567F58C6D60C67C2BD3967C9 /* Pods-flatMapLatest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
