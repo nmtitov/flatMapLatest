@@ -16,10 +16,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let input = textField.reactive.continuousTextValues.skipNil().logEvents()
-        input.observeValues { v in
-            print(v)
+        let input = textField.reactive.continuousTextValues.skipNil()
+        let requests = input.flatMap(.latest) { (text: String) -> SignalProducer<String, NoError> in
+            return ping(text: text)
+        }
+        requests.observe { event in
+            switch event {
+            case let .value(value):
+                print("Value: \(value)")
+                
+            case let .failed(error):
+                print("Error: \(error)")
+                
+            case .completed:
+                print("Completed")
+                    
+            case .interrupted:
+                print("Interrupted")
+            }
         }
     }
 }
 
+func ping(text: String) -> SignalProducer<String, NoError> {
+    return SignalProducer<String, NoError> { (observer, _) in
+        observer.send(value: "pong \(text)")
+        observer.sendCompleted()
+    }
+}
